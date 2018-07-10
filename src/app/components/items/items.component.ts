@@ -48,10 +48,4 @@ export class ItemsComponent implements OnInit {
         }
         this.commonService.selectItem(selectedItem);
     }
-    
-    test() {
-        console.log(localStorage);
-        localStorage.clear();
-        console.log(localStorage);
-    }
 }
