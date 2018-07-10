@@ -1,0 +1,26 @@
+<div class="card">
+    <div class="card-body">
+        <h3 class="card-title">Items</h3>
+        <div class="input-group mb-3">
+            <input class="form-control form-control-sm br-02" placeholder="Type name here..."
+                [class.invalid]="newItemName === ''" [(ngModel)]="newItemName"
+                (keydown.Enter)="addItem()">
+            <div class="input-group-prepend">
+                <button class="btn btn-sm btn-turquoise ml-2 br-02" [disabled]="!newItemName"
+                    (click)="addItem()">Add new</button>
+                <!--<button (click)="test()">test</button>-->
+            </div>
+        </div>
+        <div class="items-list">
+            <div *ngIf="!items.length" class="alert alert-warning m-0 pb-1 pt-1">No items</div>
+            <div *ngFor="let item of items" class="row d-block item" [class.selected]="item.selected">
+                <div class="item-body d-flex">
+                    <b class="item-name align-self-center" (click)="selectItem(item)">{{item.name}}</b>
+                    <span class="badge badge-pill badge-turquoise align-self-center ml-2 mr-2">{{item.comments.length}}</span>
+                    <button class="btn btn-sm btn-outline-danger align-self-center ml-auto"
+                        [disabled]="deleting" (click)="deleteItem(item)">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

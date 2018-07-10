@@ -1,0 +1,22 @@
+<div class="card">
+    <div class="card-body">
+        <h3 class="card-title">Comments #2</h3>
+        <div *ngIf="item ? !item.comments.length : true" class="alert alert-warning pb-1 pt-1">No comments</div>
+        <div *ngIf="item" class="comments">
+            <div *ngFor="let comment of item.comments" class="row m-0 comment">
+                <div class="img">
+                    <div></div>
+                </div>
+                <div class="text">{{comment.text}}</div>
+            </div>
+        </div>
+        <div class="row m-0 comment-input">
+            <div class="img">
+                <div></div>
+            </div>
+            <textarea class="form-control form-control-sm" placeholder="Type comment here..."
+                [class.invalid]="newComment === ''" [disabled]="!item" [(ngModel)]="newComment"
+                (keydown.control.Enter)="addComment()"></textarea>
+        </div>
+    </div>
+</div>

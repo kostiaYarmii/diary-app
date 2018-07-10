@@ -1,0 +1,131 @@
+html, body {
+    height: 100%;
+}
+
+.app-container {
+    min-height: 100%;
+}
+
+.card {
+    box-shadow: 1px 0px 2px 3px #ddd;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+.br-02 {
+    border-radius: .2rem !important;
+}
+
+.btn-turquoise {
+    background-color: #27ccc0;
+    color: white;
+}
+
+.btn-turquoise:disabled {
+    cursor: not-allowed;
+}
+
+.btn-turquoise:not(:disabled):hover {
+    background-color: #2ca29a;
+    cursor: pointer;
+}
+
+.badge-turquoise {
+    background-color: #27ccc0;
+    color: white;
+}
+
+.item {
+    margin-left: -1.4rem;
+    margin-right: 0;
+    padding: 6px 0px 0px 1.4rem;
+}
+
+.item:not(:last-child) .item-body {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 12px;
+}
+
+.item.selected, .item:hover {
+    border-left: 3px solid red;
+}
+
+.item .item-name:hover {
+    cursor: pointer;
+}
+
+.sidebar {
+    background-color: #2b2f3e;
+    color: white;
+    padding-left: 25px;
+    padding-top: 25px;
+}
+
+.comment {
+    padding: 10px 0px;
+}
+
+.comment:not(:first-child) {
+    border-top: 1px solid #ddd;
+}
+
+.comment .img, .comment-input .img {
+    width: 16%;
+}
+
+.comment .img div, .comment-input .img div {
+    height: 50px;
+    width: 50px;
+}
+
+.comment:nth-child(odd) .img div {
+    background-color: orange;
+}
+
+.comment:nth-child(even) .img div {
+    background-color: midnightblue;
+}
+
+.comment-input .img div {
+    background-color: #ddd;
+}
+
+.comment .text, .comment-input textarea {
+    font-size: 12px;
+    width: 84%;
+}
+
+.form-control.invalid:focus {
+    border-color: red;
+    box-shadow: 0 0 0 0.2rem rgb(220, 159, 165);
+}
+
+@media(max-width: 1024px) {
+    .comment .img, .comment-input .img {
+        width: 25%;
+    }
+
+    .comment .text, .comment-input textarea {
+        width: 75%;
+    }
+}
+
+@media(max-width: 823px) {
+    .comment .img, .comment-input .img {
+        width: 15%;
+    }
+
+    .comment .text, .comment-input textarea {
+        width: 85%;
+    }
+}
+
+@media(max-width: 414px) {
+    .comment .img, .comment-input .img {
+        width: 25%;
+    }
+
+    .comment .text, .comment-input textarea {
+        width: 75%;
+    }
+}
